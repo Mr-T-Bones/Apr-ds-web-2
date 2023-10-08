@@ -1,0 +1,248 @@
+:root{
+    --primercolor:  #5C6BC0;
+    --segundcolor:  #FFFFFF;
+    --negro:        #000000;
+    --titulos:      #FFCC66;
+    --barra-nav:    #6600FF; 
+
+    --fuenteGrl: 'Poppins', sans-serif;
+    --fntpb:       'Splash', cursive;
+}
+
+/*PAGINA PRINCIPAL */
+/*Cambios globales*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body{
+     background-color: var(--primercolor);
+     font-size: 1.6rem;
+     line-height: 1.5;
+
+  }
+  p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--segundcolor);
+
+  }
+  a{
+    text-decoration: none;
+  }
+  img{
+    max-width: 100%;
+  }
+  .contenedor{
+    max-width: 120rem;
+    margin:  0 auto; 
+
+  }
+  h1,h2,h3 {
+    text-align: center;
+    font-family:var(--fuenteGrl) ;
+    color: var(--titulos);
+  }
+  h1 {
+    font-size: 4rem;
+    
+  }
+  h2{
+    font-size: 3.2rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+
+.Grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+/*Heder*/
+.header {
+display: flex;
+justify-content: center;
+}
+.header__logo {
+    margin: 3rem;
+}
+
+/* Barra de navegacion*/
+.navegacion{
+     background-color: var(--barra-nav) ;
+     padding: 2rem  ;
+
+     display: flex;
+     justify-content: center;
+
+
+}
+.navegacion__enlace {
+    font-size: 3rem;
+    color: var(--segundcolor);
+    font-family: var(--fuenteGrl);
+    font-weight: bold;
+    margin-right: 2rem;
+}
+.navegacion__enlace:last-of-type{
+    margin-right: 0;
+}
+.navegacion__enlace:hover,.navegacion__enlace--activo{
+    color: var(--titulos);
+     
+}
+/*Principal */
+.Producto{
+    background-color: var(--barra-nav);
+    padding: 1rem ;
+    border-radius: 1rem;
+
+}
+.producto__imagen {
+width: 100%;
+ margin-bottom:  0%;
+}
+
+.producto__nombre {
+    font-size: 2rem ;     
+}
+.producto__precio {
+    font-size: 2.8rem;
+    color: var(--titulos);
+}
+.producto__nombre,.producto__precio{
+    font-family: var(--fuenteGrl);
+    font-weight: bolder;
+    margin: 1rem;
+    text-align: center;
+    line-height: 1.2;
+
+}
+.ig {
+ min-height:  30rem;
+ background-size: cover;
+ grid-column: 1/3;
+}
+.imagen--fondo--camisa {
+    grid-row: 2/3;
+ 
+    background-image: url(../img/grafico2.jpg);
+}
+.imagen--fondo--node{
+  background-image: url(../img/grafico1.jpg);
+  grid-row: 8/9;
+}
+
+/*fooder */
+.footer{
+    background-color: var(--barra-nav);
+    padding: 1rem;
+    margin-top: .5rem;
+
+}
+
+/* vista en dispositivos moviles (mq)*/ 
+@media (min-width:768px){
+    .Grid {
+        grid-template-columns: repeat(3, 1fr );
+    }
+    
+    .imagen--fondo--node {
+    grid-row: 5/6;
+    grid-column: 2/4;
+    }
+}
+/*PAGINA PRINCIPAL end */
+/*PAG NOSTROS  */
+
+
+/*Contenido Principal */
+.Nosotros {
+ display: grid;
+ grid-template-rows: 1fr ;
+ 
+ margin: 0;
+}
+.nosotros__cont {
+
+}
+.nosotros__img  {
+grid-row: 1 / 2;
+width: 100%;
+margin-bottom: 0%;
+}
+
+.bloques {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 2rem;
+}
+.bloque__titulo {
+margin: 0;
+}
+.bloque{
+  text-align: center;
+}
+.bloque_img {
+  width: 100%;
+}
+/*Footer  */
+
+/* vista en dispositivos moviles (mq)*/ 
+@media (min-width:768px){
+.Nosotros{
+
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+}
+
+.nosotros__img{
+  grid-column: 2/3;
+}
+.bloques{
+  grid-template-columns: repeat(4, 1fr);
+}
+.camisa {
+  display: grid; 
+  grid-template-columns: 1fr 2fr;
+  column-gap: 2rem;
+}
+}
+/*PAG NOSOTROS  The EMD */
+
+/* PAG PRODUCTO  */
+
+/*Contenido Principal */
+.formulario__submit{
+  background-color: var(--titulos) ;
+  border: none;
+  font-size: 2rem;
+  font-family: var(--fntpb);
+  padding: 2rem;
+  transition: background-color .3rem ease;
+}
+.formulario__submit:hover{
+   cursor: pointer;
+   background-color: var(--negro);
+   color: var(--segundcolor);
+}
+.formulario__camp{
+  border: 1rem solid var(--barra-nav);
+  background-color: transparent;
+  color: var(--segundcolor);
+  font-size: 2rem;
+  font-family: var(--fuenteGrl);
+  padding: 1rem;
+  appearance: none;
+
+
+/*Footer  */
+
+/* vista en dispositivos moviles (mq)*/ 
+
+/* PAG PRODUCTO  THE END  */
